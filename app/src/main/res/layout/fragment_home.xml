@@ -148,13 +148,15 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp" >
 
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
-
                 </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Button"
+                    app:layout_column="0"
+                    app:layout_row="0" />
 
             </androidx.gridlayout.widget.GridLayout>
         </LinearLayout>
