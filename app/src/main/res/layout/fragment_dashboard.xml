@@ -4,21 +4,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="159dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="473dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".ui.dashboard.DashboardFragment"/>
