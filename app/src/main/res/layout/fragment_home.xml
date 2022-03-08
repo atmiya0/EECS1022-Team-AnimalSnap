@@ -158,6 +158,14 @@
                     app:layout_column="0"
                     app:layout_row="0" />
 
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
             </androidx.gridlayout.widget.GridLayout>
         </LinearLayout>
     </ScrollView>
