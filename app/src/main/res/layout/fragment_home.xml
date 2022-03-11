@@ -118,58 +118,109 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="470dp"
+        android:layout_marginTop="24dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:columnCount="2"
             app:orientation="vertical"
-            app:rowCount="3" >
+            app:rowCount="3">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/black" />
+                app:cardBackgroundColor="@color/black">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/black" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/black" />
+                app:cardBackgroundColor="@color/black">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/black">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="75dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="145dp" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/black" />
+                app:cardBackgroundColor="@color/black">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/black" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/black" />
+                app:cardBackgroundColor="@color/black">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/black">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
         </androidx.gridlayout.widget.GridLayout>
     </androidx.core.widget.NestedScrollView>
 
