@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
-                android:text="Lion"
+                android:text="Lion1"
                 android:textColor="@color/white"></Button>
 
 
@@ -152,14 +152,6 @@
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button"
-                    app:layout_column="0"
-                    app:layout_row="0" />
-
-                <Button
-                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Button"
