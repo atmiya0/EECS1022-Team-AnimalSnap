@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
-                android:text="Lion"
+                android:text="Lion1"
                 android:textColor="@color/white"></Button>
 
 
