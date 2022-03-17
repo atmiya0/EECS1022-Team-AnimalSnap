@@ -18,10 +18,11 @@
             android:layout_width="400dp"
             android:layout_height="203dp"
             android:layout_marginTop="100dp"
+            android:src="@drawable/giraffe"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="#9999" />
+             />
 
         <TextView
             android:id="@+id/textView4"
