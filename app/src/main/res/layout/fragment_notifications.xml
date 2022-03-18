@@ -46,7 +46,7 @@
 
     <GridView
         android:layout_width="409dp"
-        android:numColumns="3"
+        android:numColumns="2"
         android:layout_height="654dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
