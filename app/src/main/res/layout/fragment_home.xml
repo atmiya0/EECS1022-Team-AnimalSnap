@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
-                android:text="Lion1"
+                android:text="Lion"
                 android:textColor="@color/white"></Button>
 
 
@@ -138,46 +138,59 @@
                 android:layout_marginTop="20dp"
                 app:cardBackgroundColor="@color/black">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="145dp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/black">
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/germanshepard" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="75dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="145dp" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_marginTop="145dp" >
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/black">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="145dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="75dp"
-                        android:layout_height="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="145dp" />
                 </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/black">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/bulldog" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/black">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/bengalcat" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -187,19 +200,11 @@
                 android:layout_marginTop="20dp"
                 app:cardBackgroundColor="@color/black">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="75dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="145dp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/black">
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/britishshorthair" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="75dp"
@@ -215,12 +220,39 @@
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/black">
 
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/europeanrabbit" />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="75dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="145dp" />
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/black">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/macaws" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="145dp" />
+            </androidx.cardview.widget.CardView>
+
         </androidx.gridlayout.widget.GridLayout>
     </androidx.core.widget.NestedScrollView>
 
