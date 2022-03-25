@@ -1,4 +1,4 @@
-package com.example.animalsnap;
+package com.example.animalsnaperoni;
 
 import org.junit.Test;
 
