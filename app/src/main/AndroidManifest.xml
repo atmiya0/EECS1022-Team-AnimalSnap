@@ -16,7 +16,7 @@
             android:name=".animal_info"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
