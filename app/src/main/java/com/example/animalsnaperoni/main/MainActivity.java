@@ -1,11 +1,11 @@
 package com.example.animalsnaperoni.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
-import com.example.animalsnaperoni.AnimalDb;
+import com.example.animalsnaperoni.AnimalDatabase;
 import com.example.animalsnaperoni.R;
+
+
 
 public class MainActivity extends AppCompatActivity {
     private MainViewModel mainViewModel = new MainViewModel(this);
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AnimalDb.init();
+        AnimalDatabase.init();
     }
 
     @Override

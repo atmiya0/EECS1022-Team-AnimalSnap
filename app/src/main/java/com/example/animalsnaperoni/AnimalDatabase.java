@@ -2,9 +2,12 @@ package com.example.animalsnaperoni;
 
 import java.util.LinkedList;
 
-public class AnimalDb {
+public class AnimalDatabase {
+
+    // Created a Animals LinkedList - Makes life simple
     private static LinkedList<Animal> animals = new LinkedList<>();
 
+    // Populating with the Animal Data
     public static void init() {
         animals.add(new Animal(
                 R.drawable.germanshepard,
@@ -105,6 +108,7 @@ public class AnimalDb {
 
     }
 
+    // Method to get the Animals Data
     public static LinkedList<Animal> getData() {
         return animals;
     }

@@ -8,10 +8,12 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.example.animalsnaperoni.Animal;
-
 import java.util.LinkedList;
 
+
+// An Adapter will need two things: the LinkedList Animal Data  &  Data View (The animal tile)
 public class AnimalTileAdapter extends BaseAdapter {
+
     private Context context;
     private LinkedList<Animal> animalLinkedList;
     private OnTileClickListener onTileClickListener;
@@ -30,6 +32,7 @@ public class AnimalTileAdapter extends BaseAdapter {
         this.onTileClickListener = onTileClickListener;
     }
 
+    // We are giving the Adapter, the size of the LinkedList : Therefore it is dynamic size
     @Override
     public int getCount() {
         return animalLinkedList.size();
@@ -45,6 +48,8 @@ public class AnimalTileAdapter extends BaseAdapter {
         return 0;
     }
 
+
+    // Building the View for the Adapter : (How will the animal title look in a grid view )
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ImageView imageView;

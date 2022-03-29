@@ -3,6 +3,8 @@ package com.example.animalsnaperoni;
 import java.util.UUID;
 
 public class Animal {
+
+    // Defining variabes (Attributes of animals)
     private String id;
     private int images;
     private String names;
@@ -11,6 +13,7 @@ public class Animal {
     private String origin;
     private int population;
 
+    // The Constructor Method for Animal
     public Animal(int images, String names, String descriptions, String species, String origin, int population) {
         id = UUID.randomUUID().toString();
         this.images = images;
@@ -21,6 +24,7 @@ public class Animal {
         this.population = population;
     }
 
+    // Getter Methods
     public int getImages() {
         return images;
     }

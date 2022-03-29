@@ -6,13 +6,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.animalsnaperoni.Animal;
-import com.example.animalsnaperoni.AnimalDb;
+import com.example.animalsnaperoni.AnimalDatabase;
 import com.example.animalsnaperoni.R;
 import com.example.animalsnaperoni.animalInfo.AnimalInfoActivity;
 import com.example.animalsnaperoni.AnimalTileAdapter;
 
 import java.util.LinkedList;
-import java.util.Locale;
 
 public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
     private AppCompatActivity appCompatActivity;
@@ -39,7 +38,7 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
     }
 
     private LinkedList<Animal> getAnimalsFilteredBySpecies(String species) {
-        LinkedList<Animal> animalLinkedList = AnimalDb.getData();
+        LinkedList<Animal> animalLinkedList = AnimalDatabase.getData();
         LinkedList<Animal> filteredAnimalLinkedList = new LinkedList<>();
 
         if (species.equals("")) {

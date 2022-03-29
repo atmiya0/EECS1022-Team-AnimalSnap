@@ -6,20 +6,23 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.animalsnaperoni.Animal;
-import com.example.animalsnaperoni.AnimalDb;
+import com.example.animalsnaperoni.AnimalDatabase;
 import com.example.animalsnaperoni.R;
 
 public class AnimalInfoViewModel {
     private AppCompatActivity appCompatActivity;
 
+    // Variables for Animal Attributes to display on the info screen
     private ImageView imgAnimal;
     private TextView txtTitle;
     private TextView txtDesc;
 
+    // Constructor Method
     public AnimalInfoViewModel(AppCompatActivity appCompatActivity) {
         this.appCompatActivity = appCompatActivity;
     }
 
+    // Init Method
     public void init() {
         imgAnimal = appCompatActivity.findViewById(R.id.imgAnimal);
         txtTitle = appCompatActivity.findViewById(R.id.txtTitle);
@@ -27,10 +30,11 @@ public class AnimalInfoViewModel {
         appCompatActivity.findViewById(R.id.img_back).setOnClickListener((action) -> appCompatActivity.onBackPressed());
     }
 
+    // Fetching the Animal Info from the AnimalDatabase.java
     public void setAnimal(String animalId) {
         Animal animal = null;
         System.out.println("search: " + animalId);
-        for (Animal a : AnimalDb.getData()) {
+        for (Animal a : AnimalDatabase.getData()) {
             System.out.println("match with: " + a.getId());
             if (a.getId().equals(animalId)) {
                 animal = a;
