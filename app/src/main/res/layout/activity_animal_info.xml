@@ -28,45 +28,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="10dp"
+            android:layout_marginTop="24dp"
             android:text="Girafee"
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@id/button3"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imgAnimal"
+            tools:layout_editor_absoluteX="10dp" />
 
         <TextView
             android:id="@+id/txtDesc"
-            android:layout_width="390dp"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="The Eurasian tree sparrow is a passerine bird in the sparrow family with a rich chestnut crown and nape, and a black patch on each pure white cheek. The sexes are similarly plumaged, and young birds are a duller version of the adult."
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintHorizontal_bias="0.476"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:autoLink="web"
-            android:linksClickable="true"
-            android:text="download"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.83"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgAnimal" />
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
         <ImageView
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/img_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/img_back"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="26dp" />
 
