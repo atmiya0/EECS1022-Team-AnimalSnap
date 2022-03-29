@@ -1,6 +1,9 @@
 package com.example.animalsnaperoni;
 
+import java.util.UUID;
+
 public class Animal {
+    private String id;
     private int images;
     private String names;
     private String descriptions;
@@ -9,6 +12,7 @@ public class Animal {
     private int population;
 
     public Animal(int images, String names, String descriptions, String species, String origin, int population) {
+        id = UUID.randomUUID().toString();
         this.images = images;
         this.names = names;
         this.descriptions = descriptions;
@@ -39,5 +43,9 @@ public class Animal {
 
     public int getPopulation() {
         return population;
+    }
+
+    public String getId() {
+        return id;
     }
 }

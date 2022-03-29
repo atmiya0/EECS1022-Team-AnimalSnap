@@ -1,4 +1,4 @@
-package com.example.animalsnaperoni.main;
+package com.example.animalsnaperoni;
 
 import android.content.Context;
 import android.view.View;

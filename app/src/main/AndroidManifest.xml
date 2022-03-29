@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalSnaperoni">
         <activity
-            android:name=".species"
+            android:name=".species.SpeciesActivity"
             android:exported="false" />
         <activity
-            android:name=".animal_info"
+            android:name=".animalInfo.AnimalInfoActivity"
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"

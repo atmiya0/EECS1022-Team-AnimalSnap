@@ -2,7 +2,7 @@ package com.example.animalsnaperoni;
 
 import java.util.LinkedList;
 
-public class AnimalTemp {
+public class AnimalDb {
     private static LinkedList<Animal> animals = new LinkedList<>();
 
     public static void init() {
@@ -27,22 +27,51 @@ public class AnimalTemp {
                 50000000
         ));
         animals.add(new Animal(
-                R.drawable.macaws,
-                "Macaws",
-                "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized dog breed. " +
-                        "It is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose. " +
-                        "The Kennel Club, the American Kennel Club, and the United Kennel Club oversee breeding records.",
-                "Dog",
-                "England",
-                50000000
+                R.drawable.britishshorthair,
+                "British Shorthair",
+                "The British Shorthair is the pedigreed version of the traditional British domestic cat, with a distinctively stocky body, " +
+                        "dense coat, and broad face. The most familiar colour variant is the \"British Blue\", with a solid grey-blue coat, orange eyes, " +
+                        "and a medium-sized tail.",
+                "Cat",
+                "United Kingdom",
+                200000
         ));
+        animals.add(new Animal(
+                R.drawable.bengalcat,
+                "Bengal cat",
+                "The Bengal cat is a domesticated cat breed created from hybrids of domestic cats, especially the spotted Egyptian Mau, with " +
+                        "the Asian leopard cat. The breed name comes from the leopard cat's taxonomic name.",
+                "Cat",
+                "USA",
+                120000
+        ));
+        animals.add(new Animal(
+                R.drawable.europeanrabbit,
+                "European rabbit",
+                "The European rabbit or coney is a species of rabbit native to the Iberian Peninsula, western France, and the northern Atlas " +
+                        "mountains in Northwest Africa. It has been widely introduced elsewhere, often with devastating effects on local biodiversity.",
+                "Rabbit",
+                "France",
+                14000000
+        ));
+        animals.add(new Animal(
+                R.drawable.netherlanddwarfrabbit,
+                "Netherland Dwarf rabbit",
+                "The Netherland Dwarf is a breed of domestic rabbit that originated in the Netherlands. Weighing 1.1–2.5 pounds, " +
+                        "the Netherland Dwarf is one of the smallest rabbit breeds. Its popularity as a pet or show rabbit may stem from its " +
+                        "neotenic appearance.",
+                "Rabbit",
+                "Netherlands",
+                14000000
+        ));
+
     }
 
     public static LinkedList<Animal> getData() {
         return animals;
     }
 
-    public AnimalTemp() {
+    public AnimalDb() {
         String[] names = {"German Shepherd", "Bull Dog", "British Shorthair", "Bengal cat", "European rabbit", "Macaws", "Cockatoos", "Netherland Dwarf rabbit", "Sakhalin fox", "Eurasian tree sparrow"};
         String[] descriptions = new String[10];
         String[] species = {"Dog", "Dog", "Cat", "Cat", "Rabbit", "Rabbit", "Parrot", "Parrot", "Fox", "Sparrow"};
