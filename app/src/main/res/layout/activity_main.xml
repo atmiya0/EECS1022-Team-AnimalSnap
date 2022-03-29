@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.animalsnaperoni.animal_info">
 
     <TextView
         android:id="@+id/textView"
@@ -135,53 +135,46 @@
             app:orientation="vertical"
             app:rowCount="3">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/germanshepard"
-                android:src="@drawable/germanshepard" />
-
-            <ImageView
-                android:id="@+id/imageView4"
+            <ImageButton
+                android:id="@+id/germanShepherd"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bulldog"
-                tools:src="@drawable/bulldog" />
+                tools:src="@drawable/germanshepard" />
 
-            <ImageView
-                android:id="@+id/imageView5"
+            <ImageButton
+                android:id="@+id/british"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/britishshorthair"
-                tools:src="@drawable/bengalcat" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/bengalcat"
                 tools:src="@drawable/britishshorthair" />
 
-            <ImageView
-                android:id="@+id/imageView7"
+            <ImageButton
+                android:id="@+id/imageVIew4"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/europeanrabbit"
-                tools:ignore="ImageContrastCheck"
+                tools:src="@drawable/bulldog" />
+
+            <ImageButton
+                android:id="@+id/imageVIew6"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                tools:src="@drawable/bengalcat" />
+
+
+
+            <ImageButton
+                android:id="@+id/imageVIew7"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 tools:src="@drawable/europeanrabbit" />
 
         </androidx.gridlayout.widget.GridLayout>
