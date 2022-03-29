@@ -79,7 +79,7 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
         } else {
             String lowercaseSearchText = searchText.toLowerCase();
             for (Animal a : animalLinkedList) {
-                if (a.getName().toLowerCase(Locale.ROOT).contains(lowercaseSearchText)) {
+                if (a.getSpecies().toLowerCase(Locale.ROOT).contains(lowercaseSearchText) || a.getName().toLowerCase(Locale.ROOT).contains(lowercaseSearchText)) {
                     filteredAnimalLinkedList.add(a);
                 }
             }
