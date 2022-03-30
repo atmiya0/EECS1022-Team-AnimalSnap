@@ -1,14 +1,22 @@
 package com.example.animalsnaperoni;
 
+import android.util.Log;
+
 import java.util.LinkedList;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class AnimalDatabase {
 
     // Created a Animals LinkedList - Makes life simple
     private static LinkedList<Animal> animals = new LinkedList<>();
+    static LinkedList<Animal> photoOfTheDay = new LinkedList<>();
+
 
     // Populating with the Animal Data
     public static void init() {
+
         animals.add(new Animal(
                 R.drawable.germanshepard,
                 "German Shepherd",
@@ -106,11 +114,39 @@ public class AnimalDatabase {
                 20000
         ));
 
+
+        //    code that executes every 24 hours, for the new photo new day
+        Timer timer = new Timer ();
+        TimerTask t = new TimerTask() {
+            @Override
+            public void run () {
+                Log.d("func check", "running run");
+
+                //instance of random class used to get random photo in database
+                Random rand = new Random();
+                int int_random = rand.nextInt(getData().size());
+                int count = 0;
+                for (Animal a : animals) {
+                    if(count == int_random) {
+                        photoOfTheDay.add(a);
+                        break;
+                    }
+                    count++;
+                }
+
+            }
+        };
+        timer.schedule(t, 0l, 1000*60*60*24);
     }
 
     // Method to get the Animals Data
     public static LinkedList<Animal> getData() {
         return animals;
     }
+
+    public static LinkedList<Animal> getPhotoOfTheDay() {
+        return photoOfTheDay;
+    }
+
 
 }

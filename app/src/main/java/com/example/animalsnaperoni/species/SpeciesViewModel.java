@@ -13,6 +13,9 @@ import com.example.animalsnaperoni.animalInfo.AnimalInfoActivity;
 import com.example.animalsnaperoni.AnimalTileAdapter;
 
 import java.util.LinkedList;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
     private AppCompatActivity appCompatActivity;
@@ -20,11 +23,19 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
     private GridView gridView;
     private TextView txtTitle;
 
+
+//    public static void dailyPhoto() {
+//    }
+
     public SpeciesViewModel(AppCompatActivity appCompatActivity) {
         this.appCompatActivity = appCompatActivity;
     }
 
     public void init() {
+        LinkedList<Animal> animalLinkedList = AnimalDatabase.getData();
+
+
+
         gridView = appCompatActivity.findViewById(R.id.animalGridView);
         txtTitle = appCompatActivity.findViewById(R.id.txtTitle);
         appCompatActivity.findViewById(R.id.img_back).setOnClickListener((action) -> appCompatActivity.onBackPressed());
@@ -45,6 +56,7 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
 //        photo of the day
         if(species.equals("Photo of the Day")) {
             Log.d("d", "photo of the day");
+            return AnimalDatabase.getPhotoOfTheDay();
         }
         else if (species.equals("")) {
             filteredAnimalLinkedList = animalLinkedList;
@@ -56,7 +68,6 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
                 }
             }
         }
-
 
         return filteredAnimalLinkedList;
     }
