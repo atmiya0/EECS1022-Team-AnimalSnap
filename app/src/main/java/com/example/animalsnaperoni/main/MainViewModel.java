@@ -1,7 +1,10 @@
 package com.example.animalsnaperoni.main;
 
+import android.content.Context;
 import android.widget.GridView;
 import android.widget.SearchView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.animalsnaperoni.Animal;
 import com.example.animalsnaperoni.AnimalDatabase;
@@ -50,6 +53,8 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
         appCompatActivity.findViewById(R.id.btn_fox).setOnClickListener((event) -> onSpeciesTagClick("fox"));
         appCompatActivity.findViewById(R.id.btn_parrot).setOnClickListener((event) -> onSpeciesTagClick("parrot"));
         appCompatActivity.findViewById(R.id.btn_sparrow).setOnClickListener((event) -> onSpeciesTagClick("sparrow"));
+
+        appCompatActivity.findViewById(R.id.imgOfTheDay).setOnClickListener((event) -> onSpeciesTagClick("Photo of the Day"));
     }
 
     private void onSpeciesTagClick(String species) {
@@ -76,13 +81,23 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
         // Will add the animals to the new Linked List i.e if you search for Bengal Cat, it gets added to the new List
         if (searchText.equals("")) {
             filteredAnimalLinkedList = animalLinkedList;
-        } else {
+        }
+        else {
             String lowercaseSearchText = searchText.toLowerCase();
             for (Animal a : animalLinkedList) {
                 if (a.getName().toLowerCase(Locale.ROOT).contains(lowercaseSearchText)) {
                     filteredAnimalLinkedList.add(a);
                 }
             }
+        }
+//                if filtered is empty that means that user's search was not apart of any animal or species we have, so alert user
+        if(filteredAnimalLinkedList.size() == 0) {
+            Context context = appCompatActivity.getApplicationContext();
+            CharSequence text = "Sorry! This species is not supported.";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
 
         animalTileAdapter.setData(filteredAnimalLinkedList, this);
@@ -91,8 +106,6 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
         return false;
     }
 
-
-    // what happens when the tile is clicked?
     @Override
     public void onTileClick(Animal animalItem) {
         AnimalInfoActivity.startActivity(appCompatActivity, animalItem.getId());

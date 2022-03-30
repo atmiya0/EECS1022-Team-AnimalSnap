@@ -1,5 +1,6 @@
 package com.example.animalsnaperoni.species;
 
+import android.util.Log;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -41,7 +42,11 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
         LinkedList<Animal> animalLinkedList = AnimalDatabase.getData();
         LinkedList<Animal> filteredAnimalLinkedList = new LinkedList<>();
 
-        if (species.equals("")) {
+//        photo of the day
+        if(species.equals("Photo of the Day")) {
+            Log.d("d", "photo of the day");
+        }
+        else if (species.equals("")) {
             filteredAnimalLinkedList = animalLinkedList;
         } else {
             String lowercaseSpeciesText = species.toLowerCase();
@@ -51,6 +56,7 @@ public class SpeciesViewModel implements AnimalTileAdapter.OnTileClickListener {
                 }
             }
         }
+
 
         return filteredAnimalLinkedList;
     }
