@@ -6,6 +6,8 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+
 import com.example.animalsnaperoni.Animal;
 import com.example.animalsnaperoni.AnimalDatabase;
 import com.example.animalsnaperoni.AnimalTileAdapter;
@@ -36,6 +38,7 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
     // Initialising Method
     public void init() {
         gridView = appCompatActivity.findViewById(R.id.animalGridView);
+        ViewCompat.setNestedScrollingEnabled(gridView,true); // adds vertical scroll to animal grid
 
         animalTileAdapter = new AnimalTileAdapter(appCompatActivity);
         animalTileAdapter.setData(AnimalDatabase.getData(), this);
