@@ -1,6 +1,7 @@
 package com.example.animalsnaperoni.main;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -100,7 +101,10 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
+//            toast.setGravity(Gravity.TOP| Gravity.LEFT, -50, 100);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL, 1, 1);
             toast.show();
+//            toast.setMargin(0, 50);
         }
 
         animalTileAdapter.setData(filteredAnimalLinkedList, this);

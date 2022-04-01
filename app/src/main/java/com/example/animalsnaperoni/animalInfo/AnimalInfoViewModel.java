@@ -16,6 +16,9 @@ public class AnimalInfoViewModel {
     private ImageView imgAnimal;
     private TextView txtTitle;
     private TextView txtDesc;
+    private TextView species;
+    private TextView origin;
+    private TextView population;
 
     // Constructor Method
     public AnimalInfoViewModel(AppCompatActivity appCompatActivity) {
@@ -27,6 +30,10 @@ public class AnimalInfoViewModel {
         imgAnimal = appCompatActivity.findViewById(R.id.imgAnimal);
         txtTitle = appCompatActivity.findViewById(R.id.txtTitle);
         txtDesc = appCompatActivity.findViewById(R.id.txtDesc);
+        species = appCompatActivity.findViewById(R.id.species);
+        origin = appCompatActivity.findViewById(R.id.origin);
+        population = appCompatActivity.findViewById(R.id.population);
+
         appCompatActivity.findViewById(R.id.img_back).setOnClickListener((action) -> appCompatActivity.onBackPressed());
     }
 
@@ -45,7 +52,9 @@ public class AnimalInfoViewModel {
             imgAnimal.setImageResource(animal.getImages());
             txtTitle.setText(animal.getName());
             txtDesc.setText(animal.getDescriptions());
-
+            species.setText("Species: "+animal.getSpecies());
+            origin.setText("Origin: "+animal.getOrigin());
+            population.setText(String.valueOf("Population: "+animal.getPopulation()));
         }
     }
 }
