@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -60,48 +60,71 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/BrowseBySpecies_Button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/imgOfTheDay"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
-                android:text="Lion"
-                android:textColor="@color/white"></Button>
-
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:background="@color/black"
-                android:text="Cat"
-                android:textColor="@color/white"></Button>
+                android:backgroundTint="@color/teal_200"
+                android:text="Photo of the Day"
+                android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/btn_dog"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
                 android:text="Dog"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btn_cat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@color/black"
+                android:text="Cat"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_rabbit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@color/black"
+                android:text="Rabbit"
                 android:textColor="@color/white">
 
             </Button>
 
             <Button
+                android:id="@+id/btn_parrot"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
                 android:text="Parrot"
-                android:textColor="@color/white"></Button>
+                android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/btn_fox"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:background="@color/black"
-                android:text="Dogs"
-                android:textColor="@color/white"></Button>
+                android:text="Fox"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_sparrow"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="@color/black"
+                android:text="Sparrow"
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -126,65 +149,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="0dp">>
+        tools:layout_editor_absoluteX="0dp">
 
-        <androidx.gridlayout.widget.GridLayout
+        <GridView
+            android:id="@+id/animalGridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:columnCount="2"
-            app:orientation="vertical"
-            app:rowCount="3">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/germanshepard"
-                android:src="@drawable/germanshepard" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bulldog"
-                tools:src="@drawable/bulldog" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/britishshorthair"
-                tools:src="@drawable/bengalcat" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/bengalcat"
-                tools:src="@drawable/britishshorthair" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/europeanrabbit"
-                tools:ignore="ImageContrastCheck"
-                tools:src="@drawable/europeanrabbit" />
-
-        </androidx.gridlayout.widget.GridLayout>
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"
+            app:orientation="vertical" />
     </androidx.core.widget.NestedScrollView>
 
 
