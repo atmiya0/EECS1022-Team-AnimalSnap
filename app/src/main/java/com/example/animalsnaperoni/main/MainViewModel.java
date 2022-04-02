@@ -104,7 +104,6 @@ public class MainViewModel implements SearchView.OnQueryTextListener, AnimalTile
 //            toast.setGravity(Gravity.TOP| Gravity.LEFT, -50, 100);
             toast.setGravity(Gravity.CENTER_HORIZONTAL, 1, 1);
             toast.show();
-//            toast.setMargin(0, 50);
         }
 
         animalTileAdapter.setData(filteredAnimalLinkedList, this);

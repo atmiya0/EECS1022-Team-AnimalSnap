@@ -136,7 +136,7 @@ public class AnimalDatabase {
 
             }
         };
-        timer.schedule(t, 0l, 1000*60*60*24);
+        timer.schedule(t, 0l, 1000*60*60*24); 
     }
 
     // Method to get the Animals Data
