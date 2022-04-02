@@ -40,9 +40,9 @@ public class AnimalInfoViewModel {
     // Fetching the Animal Info from the AnimalDatabase.java
     public void setAnimal(String animalId) {
         Animal animal = null;
-        System.out.println("search: " + animalId);
+//        System.out.println("search: " + animalId);
         for (Animal a : AnimalDatabase.getData()) {
-            System.out.println("match with: " + a.getId());
+//            System.out.println("match with: " + a.getId());
             if (a.getId().equals(animalId)) {
                 animal = a;
                 break;
